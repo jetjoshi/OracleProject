@@ -1,0 +1,30 @@
+<!--
+ Copyright (c) 2014, 2023, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Restaurants</h1>
+  <!-- Add oj-input-search component -->
+  <div id="containerDiv">
+    <oj-input-search
+      id="search1"
+      class="oj-form-control-max-width-md"
+      value="{{value}}"
+      raw-value="{{rawValue}}"
+      on-oj-value-action="[[handleValueAction]]"
+      placeholder="Search..."
+      aria-label="My search field"></oj-input-search>
+
+      <oj-table
+      id="table"
+      aria-label="Restaurants Table"
+      data="[[dataProvider]]"
+      columns='[{"headerText": "Name", "field": "name"},
+                 {"headerText": "Location", "field": "locationName"},
+                 {"headerText": "Inventory", "field": "currentInventory"},
+                 {"headerText": "Maximum Inventory", "field": "maxInventory"}]'></oj-table>
+  </div>
+
+  
+</div>
